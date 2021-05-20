@@ -87,91 +87,64 @@
 #define NOTE_CS8 4435
 #define NOTE_D8  4699
 #define NOTE_DS8 4978
-int sensorPin=6;
+
 int speakerPin=3; 
 void GameOfThrones();
-void setup()
-  {
+void setup() {
     pinMode(speakerPin,OUTPUT);
-    pinMode(sensorPin,INPUT);
-    digitalWrite(sensorPin, LOW);
-  }
-void loop()
-  { 
-    GameOfThrones();//play when entering or leaving you thrones, chair etc.
-//      //im using negative logic infrared sensor(if positive logic, use HIGH insted of LOW)
-//    if(digitalRead(sensorPin)==LOW)
-//    {
-//     delay(50);
-//     if(digitalRead(sensorPin)==LOW)
-//      {
-//       GameOfThrones();
-//      } 
-//    } 
-  }
+}
+void loop() { 
+    GameOfThrones();
+}
 
   
-void GameOfThrones()
-  {
-    for(int i=0; i<4; i++)
-    {
-    tone(speakerPin, NOTE_G4);
-    delay(500);
-    noTone(speakerPin);
-    tone(speakerPin, NOTE_C4);
-    delay(500);
-    noTone(speakerPin);
-    tone(speakerPin, NOTE_DS4);
-    delay(250);
-    noTone(speakerPin);
-    tone(speakerPin, NOTE_F4);
-    delay(250);
-    noTone(speakerPin);
-    }
-    for(int i=0; i<4; i++)
-    {
-    tone(speakerPin, NOTE_G4);
-    delay(500);
-    noTone(speakerPin);
-    tone(speakerPin, NOTE_C4);
-    delay(500);
-    noTone(speakerPin);
-    tone(speakerPin, NOTE_E4);
-    delay(250);
-    noTone(speakerPin);
-    tone(speakerPin, NOTE_F4);
-    delay(250);
-    noTone(speakerPin);
-    }
+void GameOfThrones() {
+    for (int i=0; i<4; i++) {
         tone(speakerPin, NOTE_G4);
         delay(500);
         noTone(speakerPin);
         tone(speakerPin, NOTE_C4);
         delay(500);
+        noTone(speakerPin);
         tone(speakerPin, NOTE_DS4);
         delay(250);
         noTone(speakerPin);
         tone(speakerPin, NOTE_F4);
         delay(250);
         noTone(speakerPin);
-        tone(speakerPin, NOTE_D4);
+    }
+
+    for (int i=0; i<4; i++) {
+        tone(speakerPin, NOTE_G4);
         delay(500);
         noTone(speakerPin);
-    for(int i=0; i<3; i++)
-    {
-    tone(speakerPin, NOTE_G3);
+        tone(speakerPin, NOTE_C4);
+        delay(500);
+        noTone(speakerPin);
+        tone(speakerPin, NOTE_E4);
+        delay(250);
+        noTone(speakerPin);
+        tone(speakerPin, NOTE_F4);
+        delay(250);
+        noTone(speakerPin);
+    }
+
+    tone(speakerPin, NOTE_G4);
     delay(500);
     noTone(speakerPin);
-    tone(speakerPin, NOTE_AS3);
+    tone(speakerPin, NOTE_C4);
+    delay(500);
+    tone(speakerPin, NOTE_DS4);
     delay(250);
     noTone(speakerPin);
-    tone(speakerPin, NOTE_C4);
+    tone(speakerPin, NOTE_F4);
     delay(250);
     noTone(speakerPin);
     tone(speakerPin, NOTE_D4);
     delay(500);
     noTone(speakerPin);
-    }//
+
+    for (int i=0; i<3; i++) {
         tone(speakerPin, NOTE_G3);
         delay(500);
         noTone(speakerPin);
@@ -182,80 +155,10 @@ void GameOfThrones()
         delay(250);
         noTone(speakerPin);
         tone(speakerPin, NOTE_D4);
-        delay(1000);
-        noTone(speakerPin);
-        
-        tone(speakerPin, NOTE_F4);
-        delay(1000);
-        noTone(speakerPin);
-        tone(speakerPin, NOTE_AS3);
-        delay(1000);
-        noTone(speakerPin);
-        tone(speakerPin, NOTE_DS4);
-        delay(250);
-        noTone(speakerPin);
-        tone(speakerPin, NOTE_D4);
-        delay(250);
-        noTone(speakerPin);
-        tone(speakerPin, NOTE_F4);
-        delay(1000);
-        noTone(speakerPin);
-        tone(speakerPin, NOTE_AS3);
-        delay(1000);
-        noTone(speakerPin);
-        tone(speakerPin, NOTE_DS4);
-        delay(250);
-        noTone(speakerPin);
-        tone(speakerPin, NOTE_D4);
-        delay(250);
-        noTone(speakerPin);
-        tone(speakerPin, NOTE_C4);
         delay(500);
         noTone(speakerPin);
-    for(int i=0; i<3; i++)
-    {
-    tone(speakerPin, NOTE_GS3);
-    delay(250);
-    noTone(speakerPin);
-    tone(speakerPin, NOTE_AS3);
-    delay(250);
-    noTone(speakerPin);
-    tone(speakerPin, NOTE_C4);
-    delay(500);
-    noTone(speakerPin);
-    tone(speakerPin, NOTE_F3);
-    delay(500);
-    noTone(speakerPin);
     }
-          tone(speakerPin, NOTE_G4);
-          delay(1000);
-          noTone(speakerPin);
-          tone(speakerPin, NOTE_C4);
-          delay(1000);
-          noTone(speakerPin);
-          tone(speakerPin, NOTE_DS4);
-          delay(250);
-          noTone(speakerPin);
-          tone(speakerPin, NOTE_F4);
-          delay(250);
-          noTone(speakerPin);
-          tone(speakerPin, NOTE_G4);
-          delay(1000);
-          noTone(speakerPin);
-          tone(speakerPin, NOTE_C4);
-          delay(1000);
-          noTone(speakerPin);
-          tone(speakerPin, NOTE_DS4);
-          delay(250);
-          noTone(speakerPin);
-          tone(speakerPin, NOTE_F4);
-          delay(250);
-          noTone(speakerPin);
-          tone(speakerPin, NOTE_D4);
-          delay(500);
-          noTone(speakerPin);
-    for(int i=0; i<4; i++)
-    {
+
     tone(speakerPin, NOTE_G3);
     delay(500);
     noTone(speakerPin);
@@ -266,6 +169,91 @@ void GameOfThrones()
     delay(250);
     noTone(speakerPin);
     tone(speakerPin, NOTE_D4);
+    delay(1000);
+    noTone(speakerPin);
+    
+    tone(speakerPin, NOTE_F4);
+    delay(1000);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_AS3);
+    delay(1000);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_DS4);
+    delay(250);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_D4);
+    delay(250);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_F4);
+    delay(1000);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_AS3);
+    delay(1000);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_DS4);
+    delay(250);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_D4);
+    delay(250);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_C4);
     delay(500);
+    noTone(speakerPin);
+
+    for (int i=0; i<3; i++) {
+        tone(speakerPin, NOTE_GS3);
+        delay(250);
+        noTone(speakerPin);
+        tone(speakerPin, NOTE_AS3);
+        delay(250);
+        noTone(speakerPin);
+        tone(speakerPin, NOTE_C4);
+        delay(500);
+        noTone(speakerPin);
+        tone(speakerPin, NOTE_F3);
+        delay(500);
+        noTone(speakerPin);
+    }
+
+    tone(speakerPin, NOTE_G4);
+    delay(1000);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_C4);
+    delay(1000);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_DS4);
+    delay(250);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_F4);
+    delay(250);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_G4);
+    delay(1000);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_C4);
+    delay(1000);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_DS4);
+    delay(250);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_F4);
+    delay(250);
+    noTone(speakerPin);
+    tone(speakerPin, NOTE_D4);
+    delay(500);
+    noTone(speakerPin);
+    
+    for (int i=0; i<4; i++) {
+        tone(speakerPin, NOTE_G3);
+        delay(500);
+        noTone(speakerPin);
+        tone(speakerPin, NOTE_AS3);
+        delay(250);
+        noTone(speakerPin);
+        tone(speakerPin, NOTE_C4);
+        delay(250);
+        noTone(speakerPin);
+        tone(speakerPin, NOTE_D4);
+        delay(500);
     }
  }
